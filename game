@@ -1,0 +1,112 @@
+print('Я приветствую тебя на интеллектуальной викторине "Своя игра"!')
+print('Для начала правила игры: ')
+print('--Тебе необходимо выбрать категорию и стоимость вопроса.')
+print('--Если ответ верный, то можешь выбирать следующий вопрос')
+print('--Если ответ неверный, то игра будет закончена!')
+print('--Если ответишь на все вопросы, то ты победил!')
+question_anime_100 = 'В какой стране появился и получил своё развитие жанр аниме?'
+answer_anime_100 = 'Япония'
+question_anime_200 = 'Что такое "сёдзё"?'
+answer_anime_200 = 'Аниме для девушек'
+question_anime_300 = 'Какой философский вопрос поднимает серия аниме-фильмов "Тетрадь смерти"?'
+answer_anime_300 = 'Может ли убийство быть благом?'
+question_manga_100 = 'Что такое "манга"?'
+answer_manga_100 = 'Комиксы, по которым снимают аниме'
+question_manga_200 = 'Как называют фанатов аниме и манги?'
+answer_manga_200 = 'Отаку'
+question_manga_300 = 'О чём повествует аниме-сериал "Стальной алхимик"?'
+answer_manga_300 = 'О похождениях двух братьев в техногенном мире'
+question_anime = '< : Аниме | 100 | 200 | 300'
+question_manga = '< : Манга | 100 | 200 | 300'
+yes = input('Готов? (y/n) > ')
+if yes == 'n':
+    print('Окей! Приходи в следующий раз!')
+elif yes == 'y':
+    print('< Вот категории: ')
+    print(question_anime)
+    print(question_manga)
+else:
+    print('Не смог распознать ответ, попробуй ещё раз!')
+
+score = 0
+
+while True:
+    question = input('Какую выбираешь? > ')
+    price = input('Стоимость? > ')
+    if price == '100' and question == 'Аниме':
+        print(f'< {question_anime_100}')
+        answer_user = input('Ваш ответ? > ')
+        if answer_user == answer_anime_100:
+            print(f'<> {answer_anime_100}. И это правильный ответ.')
+            score += 100
+            print(f'Ваш счёт: {score}')
+            continue
+        else:
+            print('Ответ неверный. Игра окончена.')
+        break
+
+    if price == '200' and question == 'Аниме':
+        print(f'< {question_anime_200}')
+        answer_user = input('Ваш ответ? > ')
+        if answer_user == answer_anime_200:
+            print(f'<> {answer_anime_200}. И это правильный ответ.')
+            score += 200
+            print(f'Ваш счёт: {score}')
+            continue
+        else:
+            print('Ответ неверный. Игра окончена.')
+            print(f'Твой счёт: {score}')
+        break
+    if price == '300' and question == 'Аниме':
+        print(f'< {question_anime_300}')
+        answer_user = input('Ваш ответ? > ')
+        if answer_user == answer_anime_300:
+            print(f'<> {answer_anime_300}. И это правильный ответ.')
+            score += 300
+            print(f'Ваш счёт: {score}')
+            continue
+        else:
+            print('Ответ неверный. Игра окончена.')
+            print(f'Твой счёт: {score}')
+        break
+
+    if price == '100' and question == 'Манга':
+        print(f'< {question_manga_100}')
+        answer_user = input('Ваш ответ? > ')
+        if answer_user == answer_manga_100:
+            print(f'<> {answer_manga_100}. И это правильный ответ.')
+            score += 100
+            print(f'Ваш счёт: {score}')
+            continue
+        else:
+            print('Ответ неверный. Игра окончена.')
+            print(f'Твой счёт: {score}')
+        break
+
+    if price == '200' and question == 'Манга':
+        print(f'< {question_manga_200}')
+        answer_user = input('Ваш ответ? > ')
+        if answer_user == answer_manga_200:
+            print(f'<> {answer_manga_200}. И это правильный ответ.')
+            score += 200
+            print(f'Ваш счёт: {score}')
+            continue
+        else:
+            print('Ответ неверный. Игра окончена.')
+            print(f'Твой счёт: {score}')
+        break
+
+    if price == '300' and question == 'Манга':
+        print(f'< {question_manga_300}')
+        answer_user = input('Ваш ответ? > ')
+        if answer_user == answer_manga_300:
+            print(f'<> {answer_manga_300}. И это правильный ответ.')
+            score += 300
+            print(f'Ваш счёт: {score}')
+            continue
+        else:
+            print('Ответ неверный. Игра окончена.')
+            print(f'Твой счёт: {score}')
+        break
+
+print('< Ты ответил на все вопросы! Поздравляю!')
